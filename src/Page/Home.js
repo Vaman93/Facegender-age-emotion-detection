@@ -113,8 +113,8 @@ function Home() {
   const [detections, setDetections] = React.useState([]);
 
   const videoRef = React.useRef();
-  const videoHeight = 650;
-  const videoWidth = 850;
+  const videoHeight = 600;
+  const videoWidth = 820;
   const canvasRef = React.useRef();
 
   useEffect(() => {
@@ -297,14 +297,14 @@ function Home() {
               />
               <canvas
                 ref={canvasRef}
-                style={{ position: "absolute", left: "22%", top: "5%" }}
+                style={{ position: "absolute", left: "20%", top: "5%" }}
               />
 
               <div
                 style={{
                   position: "absolute",
                   left: "40%",
-                  bottom: "3%",
+                  bottom: "4%",
                 }}
               >
                 <h2
