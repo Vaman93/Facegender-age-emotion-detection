@@ -285,19 +285,21 @@ function Home() {
               gridTemplateColumns: "20% 60% 20%",
               alignItems: "center",
               borderBottom: "1px solid black",
+              paddingBottom: "0px",
             }}
           >
             <div
               style={{
                 gridColumn: "span 3 / span 3",
                 textAlign: "center",
-                fontSize: "2rem",
+                fontSize: "1.8rem",
+                marginBottom: "5px",
               }}
             >
               {detections?.[0]?.gender ? (
                 <>Gender: {detections?.[0]?.gender}</>
               ) : (
-                <>Gender: Wait For a movement</>
+                <>Gender: Wait For a moment</>
               )}
             </div>
 
@@ -305,7 +307,7 @@ function Home() {
             <div>
               <video
                 ref={videoRef}
-                height={videoHeight - 100}
+                height={videoHeight - 90}
                 width={videoWidth}
                 onPlay={handleVideoOnPlay}
                 style={{ borderRadius: "10px" }}
@@ -319,18 +321,18 @@ function Home() {
                 style={{
                   position: "absolute",
                   left: "40%",
-                  bottom: "4%",
+                  bottom: "3%",
                 }}
               >
-                <h2
+                <h3
                   style={{
                     textAlign: "center",
-                    marginBottom: "10px",
+                    marginBottom: "6px",
                     marginLeft: "-8px",
                   }}
                 >
                   How to use guide
-                </h2>
+                </h3>
 
                 <ul
                   style={{
