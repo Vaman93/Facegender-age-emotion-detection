@@ -168,6 +168,7 @@ function Home() {
           .withFaceExpressions()
           .withAgeAndGender()
           .withFaceDescriptors();
+        console.log("detections:", detections);
 
         setDetections(detections);
 
@@ -286,6 +287,20 @@ function Home() {
               borderBottom: "1px solid black",
             }}
           >
+            <div
+              style={{
+                gridColumn: "span 3 / span 3",
+                textAlign: "center",
+                fontSize: "2rem",
+              }}
+            >
+              {detections?.[0]?.gender ? (
+                <>Gender: {detections?.[0]?.gender}</>
+              ) : (
+                <>Gender: Wait For a movement</>
+              )}
+            </div>
+
             <Emoji faces={detections?.[0]?.expressions} />
             <div>
               <video
